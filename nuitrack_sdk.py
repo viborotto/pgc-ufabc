@@ -68,7 +68,23 @@ print("Timestamp,"
       "Cabeça X,Cabeça Y,Cabeça Z,"
       "Pescoço X,Pescoço Y,Pescoço Z,"
       "Tronco X,Tronco Y,Tronco Z,"
-      "Cintura X,CIntura Y,CIntrura Z,"
+      "Cintura X,Cintura Y,Cintura Z,"
+      "Ombro Esquerdo X,Ombro Esquerdo Y,Ombro Esquerdo Z,"
+      "Ombro Direito X,Ombro Direito Y,Ombro Direito Z,"
+      "Cotovelo Esquerdo X,Cotovelo Esquerdo Y,Cotovelo Esquerdo Z,"
+      "Cotovelo Direito X,Cotovelo Direito Y,Cotovelo Direito Z,"
+      "Pulso Esquerdo X,Pulso Esquerdo Y,Pulso Esquerdo Z,"
+      "Pulso Direito X,Pulso Direito Y,Pulso Direito Z,"
+      "Quadril Esquerdo X,Quadril Esquerdo Y,Quadril Esquerdo Z,"
+      "Quadril Direito X,Quadril Direito Y,Quadril Direito Z,"
+      "Joelho Esquerdo X,Joelho Esquerdo Y,Joelho Esquerdo Z,"
+      "Joelho Direito X,Joelho Direito Y,Joelho Direito Z,"
+      "Tornozelo Esquerdo X,Tornozelo Esquerdo Y,Tornozelo Esquerdo Z,"
+      "Tornozelo Direito X,Tornozelo Direito Y,Tornozelo Direito Z,"
+      "Mao Esquerda X,Mao Esquerda Y,Mao Esquerda Z,"
+      "Mao Direita X,Mao Direita Y,Mao Direita Z,"
+      "Colarinho Esquerdo X,Colarinho Esquerdo Y,Colarinho Esquerdo Z,"
+      "Colarinho Direito X,Colarinho Direito Y,Colarinho Direito Z,"
       )
 while 1:
     key = cv2.waitKey(1)
@@ -106,28 +122,6 @@ while 1:
                     "right_ankle"
                 ]
 
-                # print(f"TImestamp: {global_timestamp}")
-
-                # print(f"Cabeça: {skeleton.head.real}")
-                # print(f"Pescoço: {skeleton.neck.real}")
-                # print(f"Tronco: {skeleton.torso.real}")
-                # print(f"Cintura: {skeleton.waist.real}")
-                # print(f"Ombro Esquerdo: {skeleton.left_shoulder.real}")
-                # print(f"Ombro Direito: {skeleton.right_shoulder.real}")
-                # print(f"Cotovelo Esquerdo: {skeleton.left_elbow.real}")
-                # print(f"Cotovelo Direito: {skeleton.right_elbow.real}")
-                # print(f"Pulso Esquerdo: {skeleton.left_wrist.real}")
-                # print(f"Pulso Direito: {skeleton.right_wrist.real}")
-                # print(f"Quadril Esquerdo: {skeleton.left_hip.real}")
-                # print(f"Quadril Direito: {skeleton.right_hip.real}")
-                # print(f"Joelho Esquerdo: {skeleton.left_knee.real}")
-                # print(f"Joelho Direito: {skeleton.right_knee.real}")
-                # print(f"Tornozelo Esquerdo: {skeleton.left_ankle.real}")
-                # print(f"Tornozelo Direito: {skeleton.right_ankle.real}")
-                # print(f"Mão Direita: {skeleton.left_hand.real}")
-                # print(f"Mão Esquerda: {skeleton.right_hand.real}")
-                # print(f"Colar Esquerdo: {skeleton.left_collar.real}")
-                # print(f"Colar Direito: {skeleton.right_collar.real}")
 
                 # Substitua os prints dentro do try block pelo seguinte:
                 head_x, head_y, head_z = skeleton.head.real
@@ -156,23 +150,23 @@ while 1:
                     f"{neck_x},{neck_y},{neck_z},"
                     f"{torso_x},{torso_y},{torso_z},"
                     f"{waist_x},{waist_y},{waist_z},"
-                    # f"{left_shoulder_x},{left_shoulder_y},{left_shoulder_z},"
-                    # f"{right_shoulder_x},{right_shoulder_y},{right_shoulder_z},"
-                    # f"{left_elbow_x},{left_elbow_y},{left_elbow_z},"
-                    # f"{right_elbow_x},{right_elbow_y},{right_elbow_z},"
-                    # f"{left_wrist_x},{left_wrist_y},{left_wrist_z},"
-                    # f"{right_wrist_x},{right_wrist_y},{right_wrist_z},"
-                    # f"{left_hip_x},{left_hip_y},{left_hip_z},"
-                    # f"{right_hip_x},{right_hip_y},{right_hip_z},"
+                    f"{left_shoulder_x},{left_shoulder_y},{left_shoulder_z},"
+                    f"{right_shoulder_x},{right_shoulder_y},{right_shoulder_z},"
+                    f"{left_elbow_x},{left_elbow_y},{left_elbow_z},"
+                    f"{right_elbow_x},{right_elbow_y},{right_elbow_z},"
+                    f"{left_wrist_x},{left_wrist_y},{left_wrist_z},"
+                    f"{right_wrist_x},{right_wrist_y},{right_wrist_z},"
+                    f"{left_hip_x},{left_hip_y},{left_hip_z},"
+                    f"{right_hip_x},{right_hip_y},{right_hip_z},"
 
-                    # f"{left_knee_x},{left_knee_y},{left_knee_z},"
-                    # f"{right_knee_x},{right_knee_y},{right_knee_z},"
-                    # f"{left_ankle_x},{left_ankle_y},{left_ankle_z},"
-                    # f"{right_ankle_x},{right_ankle_y},{right_ankle_z},"
-                    # f"{left_hand_x},{left_hand_y},{left_hand_z},"
-                    # f"{right_hand_x},{right_hand_y},{right_hand_z},"
-                    # f"{left_collar_x},{left_collar_y},{left_collar_z},"
-                    # f"{right_collar_x},{right_collar_y},{right_collar_z}"
+                    f"{left_knee_x},{left_knee_y},{left_knee_z},"
+                    f"{right_knee_x},{right_knee_y},{right_knee_z},"
+                    f"{left_ankle_x},{left_ankle_y},{left_ankle_z},"
+                    f"{right_ankle_x},{right_ankle_y},{right_ankle_z},"
+                    f"{left_hand_x},{left_hand_y},{left_hand_z},"
+                    f"{right_hand_x},{right_hand_y},{right_hand_z},"
+                    f"{left_collar_x},{left_collar_y},{left_collar_z},"
+                    f"{right_collar_x},{right_collar_y},{right_collar_z}"
                     )
 
             except AttributeError as e:
